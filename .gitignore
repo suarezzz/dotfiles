@@ -1,3 +1,2 @@
-*
-!preference/
-!.gitignore
+.DS_Store
+.cache

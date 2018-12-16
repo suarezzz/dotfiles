@@ -1,0 +1,35 @@
+[user]
+	email = wang.yashu@icloud.com
+	name = wang yashu
+[includeIf "gitdir:~/workspace/"]
+  path = ~/workspace/.gitconfig
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = matching
+[alias]
+	br = branch
+	co = checkout
+	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status
+	stav = stash show -p stash@{0}
+	stals = stash list
+	stad = stash drop stash@{0}
+	d = difftool
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+	trustExitCode = true
+
+[pager]
+	branch = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
