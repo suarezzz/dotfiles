@@ -1,5 +1,4 @@
 # install
 ```
-./install.sh
+./bootstrap.sh
 ```
-

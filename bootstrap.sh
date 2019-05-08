@@ -10,9 +10,9 @@ exclude_paths=(
 
 exclude_files=(
   '.DS_Store'
-  'REAME.md'
+  'README.md'
   '.gitignore'
-  'bootstrap.sh'[
+  'bootstrap.sh'
 )
 
 # complete cmd
@@ -23,11 +23,12 @@ do
 done
 for i in ${exclude_files[@]}
 do
-  cmd=$cmd" -not -name ./$i"
+  cmd=$cmd" -not -name $i"
 done
 cmd=$cmd" -print"
 
 files=$($cmd)
+echo $cmd
 for file in $files
 do
   if [ -f $file ]

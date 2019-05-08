@@ -4,13 +4,13 @@
 [includeIf "gitdir:~/workspace/"]
   path = ~/workspace/.gitconfig
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/wongyashu/.gitignore
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [push]
 	default = matching
@@ -18,6 +18,7 @@
 	br = branch
 	co = checkout
 	tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	logs = log --all --graph --decorate --oneline
 	st = status
 	stav = stash show -p stash@{0}
 	stals = stash list
